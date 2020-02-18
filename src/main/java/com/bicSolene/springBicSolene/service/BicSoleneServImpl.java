@@ -9,7 +9,7 @@ import com.bicSolene.springBicSolene.model.BicSolene;
 import com.bicSolene.springBicSolene.repository.BicSoleneRepository;
 
 
-@Service
+@Service(value ="bicSoleneService")
 public class BicSoleneServImpl implements BicSoleneService{
 	
 	@Autowired

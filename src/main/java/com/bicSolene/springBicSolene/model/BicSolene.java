@@ -18,7 +18,7 @@ public class BicSolene {
 	@GeneratedValue(generator = "seq_generator", strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name="seq_generator", sequenceName = "SEQ_BICSOLENE", allocationSize=1)
 	private long id;
-	
+	//to do: indiquer que l'id ci-dessous provient de la table couleur (clef etranère)
 	@Column(name = "IDCOULEUR", nullable = false)
 	private int idCouleur;
 	
