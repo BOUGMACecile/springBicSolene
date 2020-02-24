@@ -2,6 +2,7 @@ package com.bicSolene.springBicSolene.service;
 
 import java.util.List;
 
+import javax.validation.Valid;
 
 import com.bicSolene.springBicSolene.model.Couleur;
 
@@ -12,7 +13,7 @@ public interface CouleurService {
 	
 	//To create /add a Color
 	
-		public Couleur addCouleur(String couleurName);
+		public Couleur addCouleur(Couleur couleurName);
 		
 		
 		/***
@@ -24,5 +25,7 @@ public interface CouleurService {
 		//public Couleur saveOrUpdateCouleur(Couleur couleur);
 		
 		public void deleteCouleur(long id);
+
+	
 	
 }

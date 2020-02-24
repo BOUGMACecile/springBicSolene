@@ -33,10 +33,9 @@ public  class CouleurServiceImpl implements CouleurService {
 	}
 
 	@Override
-	public Couleur addCouleur(String couleurName) {
+	public Couleur addCouleur(Couleur couleurName) {
 		
-		return colorBicSolene.save(couleurName);
-	}
+		return colorBicSolene.save(couleurName);}
 
 	@Override
 	public List<Couleur> findAllCouleur() {
