@@ -34,6 +34,7 @@ public class BicSoleneController {
 	public BicSoleneController() {}// TODO Auto-generated constructor stub
 	
 	//a log for error
+	@SuppressWarnings("unused")
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	//Declaration of an objet Bicsolene'service via  of interface Class
@@ -41,7 +42,7 @@ public class BicSoleneController {
 	private BicSoleneService bicSoleneserv;
 	
 	
-	/**Methode to find one BicSolene by id
+	/**Method to find one BicSolene by id
 	 * */
 	
 	 
@@ -64,7 +65,7 @@ public class BicSoleneController {
 		
 	}//end createBicSolene
 		
-		//Methode to fetch all Bicslene from db
+		//Method to fetch all Bicslene from db
 		
 		@GetMapping(path ="/allBicsolene")
 		//@ResponseStatus(HttpStatus.OK)
@@ -75,7 +76,7 @@ public class BicSoleneController {
 					
 			
 	
-	//Methode to delete a BicSolene
+	//Method to delete a BicSolene
 		@DeleteMapping(path ="/suppBicsolene")
 		public void  suppBicsolene(@PathVariable @Valid long id) {
 			try {
@@ -84,7 +85,7 @@ public class BicSoleneController {
 				throw new NotFoundException("BicSolene " + id + " not found", e);
 			}
 		}
-	//Methode to delete all BicSolene
+	//Methodeto delete all BicSolene
 		@DeleteMapping(path ="/deleteAllBicSolene")
 		public void deleteAllBicSolen() {
 			bicSoleneserv.deleteAllBicSolene();
@@ -92,7 +93,7 @@ public class BicSoleneController {
 		}//end deleteAllBic
 		
 		
-		//Methode to update a BicSolene
+		//Method to update a BicSolene
 		@PutMapping (path ="modifBicSolene/{id}")
 		public BicSolene modifBicSolene(@PathVariable long id,@RequestBody @Valid BicSolene bicSolene) {
 			BicSolene bicmodif = bicSoleneserv.findBicSolene(id);
